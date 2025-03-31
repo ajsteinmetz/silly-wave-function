@@ -5,7 +5,7 @@ This repository contains a Python script that computes and animates the time evo
 
 ## Overview
 
-The initial wave function is defined as:
+The initial wave function is defined as
 ```math
 \psi(x,0) =
 \begin{cases}
@@ -15,26 +15,26 @@ The initial wave function is defined as:
 ```
 where $a = 1 \times 10^{-10}$ m is the length of the box.
 
-The eigenfunctions of the infinite well are:
+The eigenfunctions of the infinite well are
 ```math
 \phi_n(x)=\sqrt{\frac{2}{a}}\sin\frac{n\pi x}{a}.
 ```
-The Fourier coefficients $c_n$ for the expansion of the initial state are computed using:
+The Fourier coefficients $c_n$ for the expansion of the initial state are computed using
 ```math
 c_n = \frac{\sqrt{2}}{\pi}\left[\frac{\sin\frac{(2-n)\pi}{2}}{2-n}-\frac{\sin\frac{(2+n)\pi}{2}}{2+n}\right],
 ```
-with the $n=2$ case evaluated via its limiting value:
+with the $n=2$ case evaluated via its limiting value
 ```math
 c_2 = \frac{\sqrt{2}}{2}.
 ```
 
-The full time-dependent wave function is then given by:
+The full time-dependent wave function is then given by
 ```math
 \Psi(x,t)=\sum_{n=1}^{N_{\max}} c_n\,\sqrt{\frac{2}{a}}\sin\frac{n\pi x}{a}\,\exp\Bigl(-i\frac{n^2\pi^2\hbar t}{2ma^2}\Bigr),
 ```
 where $N_{\max}$ is the number of Fourier terms used (set to 50 in the script).
 
-The probability density $|\Psi(x,t)|^2$ is computed and animated over a time interval from $t=0$ to $t=10\tau$, where the characteristic time $\tau$ is defined from the ground state ($n=1$):
+The probability density $|\Psi(x,t)|^2$ is computed and animated over a time interval from $t=0$ to $t=10\tau$, where the characteristic time $\tau$ is defined from the ground state ($n=1$)
 ```math
 \tau = \frac{2ma^2}{\pi^2\hbar}.
 ```
