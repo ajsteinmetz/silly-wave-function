@@ -57,7 +57,7 @@ The following Python packages are required:
   The function `psi(x, t)` constructs the time-dependent wave function by summing the contributions from each eigenstate, each evolving with a phase factor $\exp\left(-i\frac{n^2\pi^2\hbar t}{2ma^2}\right)$.
 
 - **Animation:**  
-  The script uses Matplotlib's `FuncAnimation` to animate the probability density $|\Psi(x,t)|^2$. The y-axis limit is set to 1.4 times the maximum initial value for better visualization.
+  The script uses Matplotlib's `FuncAnimation` to animate the probability density $|\Psi(x,t)|^2$.
 
 - **Output:**  
   The animation is saved as a GIF file using `PillowWriter`.
